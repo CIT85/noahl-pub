@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Noah Lee">
+        <meta name="description" content="Osu! Beatmap Recommendations Coding Project.">
+        <meta charset="UTF-8">
+        <title>Graphics Libraries</title>
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="wordle-project.html">Wordle Rankings</a>
+                <a href="beat-saber-project.html">Beat Saber Difficulty Calculator</a>
+                <a href="osu-protect.html">Osu! Beatmap Recommendations</a>
+                <a href="#">New Super Mario Bros. DS Randomizer</a>
+                <a href="sfml-opengl.html">SFML &amp; OpenGL</a>
+            </nav>
+            <h1>Graphics Libraries</h1>
+        </header>
+
+        <main>
+            <article id="experience">
+                <h2>My Experience</h2>
+                <p>
+                    A Python script that randomizes the level locations in New Super Mario Bros. DS.
+                </p>
+                    
+                <section>
+                    <h3>Projects using SFML</h3>
+                    <p>
+                        SFML is a graphics library, and I've used it for making some goofy little games from time to time. I don't have any open source projects working with SFML, but that doesn't mean I don't have any.
+                    </p>
+                    <figure>
+                        <img src="img/nyfen-game-title.png" alt="Nyfen: The Game 2 SFML" width="481" height="500">
+                        <figcaption>Nyfen: The Game 2 Title Screen</figcaption>
+                    </figure>
+                    <p>
+                        This is likely the most notable thing I have made using SFML, a game made for one of my friends which we called 'Nyfen: The Game 2'. It's a simple survival bullet hell game where you dodge circles or 'bullets' and try not to get hit.
+                    </p>
+                    <figure>
+                        <img src="img/nyfen-gameplay.png" alt="Nyfen: The Game 2 Gameplay Screenshot" width="480" height="500">
+                        <figcaption>Nyfen: The Game 2 Gameplay</figcaption>
+                    </figure>
+                    <p>
+                        This project had a lot going on in it, and was filled with a bunch of excessive content.
+                        <ul>
+                            <li>A Life Based Scoring System</li>
+                            <li>Gameplay Modifiers</li>
+                            <li>Achievements</li>
+                        </ul>
+                        I even included a remaster of the first Nyfen: The Game, where the orginal was initially made in godot.
+                    </p>
+                    <figure>
+                        <img src="img/nyfen-game-achievements.png" alt="Nyfen: The Game 2 Achievement Page Screenshot" width="481" height="500">
+                        <figcaption>Achievement Page</figcaption>
+                    </figure>
+                    <p>
+                        Unfortunately, due to my incredibly busy schedule I don't really have any other notable projects written in SFML. I hope to work with it more in the future, but it's incredibly limiting as the library itself only supports 2D rendering and working with audio inside of it is less than ideal.
+                    </p>
+                </section>
+            </article>
+
+            <article id="other">
+                <h2>Other Graphics Libraries</h2>
+                <section>
+                    <h3>OpenGL</h3>
+                    <p>
+                        Similarly with SFML, I don't really have any notable projects made in OpenGL, in fact for the most part I barely even scratched the surface with it. The reason it's listed above any other graphics library I have used is because currently it's the one I have the most interest in.
+                    </p>
+                    <p>
+                        Since OpenGL is so low level, it means that there are significantly less restrictions then compared to using a library with pre-built renderers. Raylib and SFML are very easy to learn, but it's a lot harder to get control over audio processing or ensuring good frame times.
+                    </p>
+                    <p>
+                        The two most notable things I've used OpenGL for are making a 2D gravity simulation as well as an attempt at recreating Minecraft, because every good game developer needs to recreate Minecraft at least once in their life.
+                    </p>
+                </section>
+
+                <section>
+                    <h3>Raylib</h3>
+                    <p>
+                        Raylib is similar to SFML but with the added benefit of a built in 3D Renderer. I've mainly used it to test rendering 3D Models as well as Shaders. While I did have plans in the past to try and make a game using Raylib, I've become more engrossed in learning OpenGL and using that as my main Graphics Renderer.
+                    </p>
+                    <a href="https://www.youtube.com/watch?v=NnHD7DFMvdE">Raylib 3D Model &amp; Shader Test Video</a>
+                </section>
+
+                <section>
+                    <h3>LWJGL</h3>
+                    <p>
+                        LWJGL is interesting, as it's the one graphics library that I haven't explicitly made anything for on my own, but it is the own I have probably used the most. Most notably in working with the source code for Minecraft Alpha in an attempt to create a mod for said version. The main issue I have with LWJGL is that there are simply better libraries that I can use, OpenGL the C/C++ equivalent, with more low-level learning opportunities, Raylib can do 3D and Audio Management at a more simplictic level, and SFML is just more fun to write code for. For the most part I would prefer to keep Java as the language I write explicitly low-level software for.
+                    </p>
+                </section>
+            </article>
+
+            <article id="future">
+                <h2>Things I want to learn.</h2>
+                <p>
+                    Additional Things I want to learn, regarding Rendering, Engine Development, Simulations, and more.
+                </p>
+
+                <section>
+                    <h3>Rasterization</h3>
+                    <p>
+                        I've watched a lot of low-level programming videos regarding Game Development, and the main thing that always piques my interest is texture rasterization. There is an incredible video by Sebastian Lague regrading <a href="https://youtu.be/yyJ-hdISgnw?si=DtaYWLcRjRCDEOcd">Software Rasterization</a>. It's both in depth enough to where I get almost lost in the mathematics behind it while being informational enough to where I'm confident with a weekend and about 8 collective hours of sleep I could probably make something like this.
+                    </p>
+                </section>
+
+                <section>
+                    <h3>Simulations</h3>
+                    <p>
+                        I mentioned with OpenGL that I've made gravity simulation, however I'm also interested in making other types of physics simulations. Expanding on the concept, and recreating the solar system, or trying to simulate both the gravitation and visual effects of a black hole. Creating an atomic simulation based on quarks, photons, possibly even light itself. There are a lot of possibilities, and I have an interest in just about anything that creating a visual simulation for everything that we can and can not see isn't off the table.
+                    </p>
+                </section>
+            </article>
+        </main>
+
+        <footer>
+            <h3>External Links</h3>
+            <p>
+                <a href="https://www.w3schools.com/html/default.asp" target="_blank">W3Schools</a>
+            </p>
+
+            <p>
+                &lt;&lt;&lt; &copy; <a href="https://github.com/potasium2" target="_blank">Noah Lee</a> &gt;&gt;&gt;
+            </p>
+            <p>
+                <a href="site.html">Site Map</a>
+            </p>
+            <p>
+                <a href="#">Return to Top</a>
+            </p>
+        </footer>
+    </body>
+</html>

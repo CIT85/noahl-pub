@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Noah Lee">
+        <meta name="description" content="Osu! Beatmap Recommendations Coding Project.">
+        <meta charset="UTF-8">
+        <title>New Super Mario Bros. DS Randomizer</title>
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="wordle-project.html">Wordle Rankings</a>
+                <a href="beat-saber-project.html">Beat Saber Difficulty Calculator</a>
+                <a href="osu-protect.html">Osu! Beatmap Recommendations</a>
+                <a href="#">New Super Mario Bros. DS Randomizer</a>
+                <a href="sfml-opengl.html">SFML &amp; OpenGL</a>
+            </nav>
+            <h1>New Super Mario Bros. DS Randomizer</h1>
+        </header>
+
+        <main>
+            <article id="aboutProject">
+                <h2>What is it?</h2>
+                <p>
+                    A Python script that randomizes the level locations in New Super Mario Bros. DS.
+                </p>
+                    
+                <section>
+                    <h3>Project Information</h3>
+                    <p>Below is a link to the project detailing more information.</p>
+
+                    <p>
+                        <a href="https://github.com/potasium2/NSMB-Randomizer" target="_blank">Source Code</a>
+                    </p>
+                </section>
+            </article>
+
+            <article id="codeBase">
+                <h2>How does it work?</h2>
+
+                <section>
+                    <h3>What is a Randomizer</h3>
+                    <p>
+                        A game randomizer shuffles the content in the game in an unpredictable manor. They're used to create a new experience from a familiar game that one has played before.
+                    </p>
+                    <p>
+                        Randomizer's are fairly common, to the point where if a game exists then theres very likely a randomizer for it. Randomizer's are so popular, in fact, that an extended version known as archipelago has been created to randomize the contents of multiple games across each other. This means that you can find an item for one game inside of another, allowing for an extensive single player, and multiplayer experience.
+                    </p>
+                </section>
+
+                <section>
+                    <h3>How was this made?</h3>
+                    <p>
+                        This was made in Python using the library <a href="https://github.com/RoadrunnerWMC/ndspy">ndspy</a>. It works by accessing each of the games levels and shuffling them about, randomizing the order in which you need to play each level. The levels in the game can be divided into areas, with there always containing one main area and up to two additional sub-areas.
+                    </p>
+                    <p>
+                        The main crux of the randomizer are these areas, shuffling each area into a different area. This allows for more complex levels to be randomized as opposed to simply randomizing the main areas and ignoring sub-areas, however this randomization runs into it's own problems.
+                    </p>
+                </section>
+            </article>
+
+            <article id="future">
+                <h2>Known Issues and Future for the Project</h2>
+                <p>
+                    Some known issues as well as what I want to do with the project in the future.
+                </p>
+
+                <section>
+                    <h3>Known Issues</h3>
+                    <p>
+                        The most notable issue comes into play with how sub-levels are indexed. Each level is hardcoded with the number of areas that a level contains. In normal gameplay this is fine, but when trying to randomize the game there is a major issue when trying to shuffle a level with three areas into a level with two areas.
+                    </p>
+                    <p>
+                        The ideal fix would be to update the area count when shuffling, however in decompiling the source code I have yet to find where this is coded into the base game. The second solution would be to just shuffle levels based on area count, so a level with two areas can only be swapped with another level with two areas. This is fine, but it does leave for less possibilities, and an overall less randomized/exciting experience for the user and is therefore not ideal.
+                    </p>
+                </section>
+
+                <section>
+                    <h3>Archipelago</h3>
+                    <p>
+                        I mentioned archipelago in the past, but only briefly. Archipelago is a randomizer for randomizers, allowing a games items to be shuffled into anothers. This project was actually made with Archipelago in mind, the idea was to finish the randomizer and then create an archipelago world, the format used for generating archipelago games, using levels and other in games items as checks. This goal is still attainable, and from working on an archipelago for another game, it's not super complicated, the main issue lies in the major known issue listed above.
+                    </p>
+                </section>
+
+                <section>
+                    <h3>Future Development</h3>
+                    <p>
+                        I'll likely continue working on this project in the future when I have more free time. I'll likely enlist help from people who have more experience working with the <a href="https://github.com/RoadrunnerWMC/ndspy">ndspy</a> library than me. There are also a lot of quality of life things I want to add, including cleaning up UI, creating an executable so you don't have to run source code, as well as some in game changes like skipping the opening cutscene and displaying the correct level number when loading a level. At the very least I'll implement the less ideal fix for the sub-level indexing and create an open source repo for archipelago that other people can update on their own.
+                    </p>
+                </section>
+            </article>
+        </main>
+
+        <footer>
+            <h3>External Links</h3>
+            <p>
+                <a href="https://www.w3schools.com/html/default.asp" target="_blank">W3Schools</a>
+            </p>
+
+            <p>
+                &lt;&lt;&lt; &copy; <a href="https://github.com/potasium2" target="_blank">Noah Lee</a> &gt;&gt;&gt;
+            </p>
+            <p>
+                <a href="site.html">Site Map</a>
+            </p>
+            <p>
+                <a href="#">Return to Top</a>
+            </p>
+        </footer>
+    </body>
+</html>

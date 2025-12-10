@@ -1,0 +1,308 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    line-height: 2.25rem;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+}
+
+/* Utilitiy Classes */
+.calc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.calc-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.calc-grid section {
+    background: #f4e8f3;
+    padding: 1rem;
+    border-radius: 0.4rem;
+}
+
+/* Header & Nav */
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    margin-top: 5rem;
+    padding-bottom: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #444;
+    padding: 0.5rem;
+    position: fixed;
+    width: 100%;
+}
+
+nav a, nav a:visited {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+nav a:hover {
+    color: #768dd7;
+}
+
+/* Main */
+main {
+    padding: 1rem 1rem 5rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+article {
+    background-color: #EAD6E7;
+    padding: 1rem;
+    border-radius: 0.4rem;
+}
+
+article h2 {
+    font-size: 1.8rem;
+}
+
+article section {
+    margin-bottom: 0.8rem;
+}
+
+details {
+    margin-top: 0.5rem;
+}
+
+a {
+    color: #060A19;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+/* Why is visited:hover actually a callable what */
+a:hover, a:visited:hover {
+    color: #768dd7;
+}
+
+a:visited {
+    color: #abb2cb;
+}
+
+article a:visited, ul a:visited {
+    color: #0d1634;
+}
+
+a:focus, a:active {
+    color: #AE2C3B
+}
+
+img {
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+}
+
+li {
+    margin-left: 1rem;
+}
+
+mark {
+    background-color: #eaf;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+}
+
+footer p {
+    margin-left: 0.75rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1400px) {
+    nav {
+        padding: 0.5rem;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+
+    main {
+        padding: 1rem 0.5rem;
+        grid-template-columns: 1fr;
+    }
+
+    article {
+        padding: 0.8rem;
+    }
+
+    article h2 {
+        font-size: 1.2rem;
+    }
+
+    footer {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #444;
+        padding: 1rem;
+        height: 5rem;
+    }
+
+    header h1 {
+        margin-top: 5.75rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 100%;
+        background-color: #444;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 2rem;
+        z-index: 1;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 1rem;
+        text-align: left;
+        border-bottom: 1px solid #555;
+        display: block;
+    }
+
+    nav a:hover {
+        background-color: #768dd7;
+    }
+
+    header h1 {
+        margin-top: 1rem;
+        padding-left: 200px;
+        padding-bottom: 1rem;
+    }
+
+    main {
+        padding-left: 220px;
+    }
+
+    footer {
+        position: fixed;
+        background-color: #333;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        z-index: 2;
+    }
+
+    footer ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    footer ul li {
+        display: inline;
+    }
+
+    footer p {
+        margin-left: 0.75rem;
+    }
+
+    footer a {
+        color: white;
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    nav {
+        display: none;
+    }
+
+    header h1 {
+        padding-left: 0;
+    }
+
+    main {
+        padding-left: 20px;
+    }
+
+    footer h3 {
+        display: none;
+    }
+}

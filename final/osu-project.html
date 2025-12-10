@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Noah Lee">
+        <meta name="description" content="Osu! Beatmap Recommendations Coding Project.">
+        <meta charset="UTF-8">
+        <title>Osu Beatmap Recommendations Project</title>
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="wordle-project.html">Wordle Rankings</a>
+                <a href="beat-saber-project.html">Beat Saber Difficulty Calculator</a>
+                <a href="#">Osu! Beatmap Recommendations</a>
+                <a href="nsmb-ds-randomizer.html">New Super Mario Bros. DS Randomizer</a>
+                <a href="sfml-opengl.html">SFML &amp; OpenGL</a>
+            </nav>
+            <h1>Osu! Beatmap Recommender</h1>
+        </header>
+
+        <main>
+            <article id="aboutProject">
+                <h2>What is it?</h2>
+                <p>
+                    A site Recommends an Osu! Beatmap based on a players top play and preferred mapping style.
+                </p>
+                    
+                <section>
+                    <h3>Site Information</h3>
+                    <p>Below is some information about the site including screenshots and links.</p>
+                    <figure>
+                        <img src="img/osu-suggest-site.png" alt="Osu! Suggestions Website" width="500" height="181">
+                        <figcaption>Screenshot of The Osu! Beatmap Recommender Website</figcaption>
+                    </figure>
+
+                    <p>
+                        <a href="https://potasium2.github.io/osu-beatmap-recommendations/" target="_blank">Site Page</a>
+                        <a href="https://github.com/potasium2/osu-beatmap-recommendations" target="_blank">Source Code</a>
+                    </p>
+                </section>
+            </article>
+
+            <article id="dataProcessing">
+                <h2>How does it work?</h2>
+
+                <section>
+                    <h3>Obtaining Beatmaps</h3>
+                    <p>
+                        Osu! has separate categories for it's beatmaps, but the category that is most important is ranked. I actually ended up making a separate tool in Python to sift through every single ranked beatmap in the game and then save them to their specified JSON array. Once the data was obtained and sorted I was able to create a function in JavaScript that gets every map from a players preferred skillset, or mapping style. Then, it shuffles the array and returns a random beatmap as a recommendation.
+                    </p>
+                </section>
+
+                <section>
+                    <h3>Processing Data</h3>
+                    <p>
+                        When a player submits their data, a lot of things need to be processed. For starters, a beatmaps performance value is not saved, so the performance value that a person submits gets turned into a 'recommended star rating'. This recommended star rating gets compared to a beatmaps star rating inside of the JSON list. The star rating inside of the list gets multiplied depending on modifiers selected as well, Hidden is -0.25 Stars, Hardrock is *1.075 Stars, and Double Time is *1.4 Stars. After a beatmap is selected, it then prints the data to a table where a person can see the beatmap, its information, and delete it from the table.
+                    </p>
+                </section>
+            </article>
+
+            <article id="future">
+                <h2>Future for the Project.</h2>
+                <p>
+                    Future plans for this project, along with any other thoughts and comments I have.
+                </p>
+
+                <section>
+                    <h3>Overall Comments</h3>
+                    <p>
+                        For the most part the tool is done, you can give it your stats and it will give you a map. There are some things that I would change though if I were to remake the tool. For starters, it is currently limited to mapsets from 2007-2024, this is because I made the tool in 2024 so the JSON file containing all the ranked beatmaps is doesn't contain any maps made in the past 12 months. Ideally, I would use Osu!'s API in the site itself, to make a call for a random ranked map and do a check if it meets the criterias the player has listed.
+                    </p>
+                    <p>
+                        With that, the only other comments I have are minor things. For example, a person should be able to set the amount of maps they want to generate, right now it's one at a time. Furthermore, it should save the stats you had just used to allow for generating multiple recommendations more easily. The rest of the site could also be filled with more stuff, possibly more options for loved and graveyarded maps as well. Those will likely be things I try out in the future though since I'm fairly satisifed with this project as is.
+                    </p>
+                </section>
+            </article>
+        </main>
+
+        <footer>
+            <h3>External Links</h3>
+            <p>
+                <a href="https://www.w3schools.com/html/default.asp" target="_blank">W3Schools</a>
+            </p>
+
+            <p>
+                &lt;&lt;&lt; &copy; <a href="https://github.com/potasium2" target="_blank">Noah Lee</a> &gt;&gt;&gt;
+            </p>
+            <p>
+                <a href="site.html">Site Map</a>
+            </p>
+            <p>
+                <a href="#">Return to Top</a>
+            </p>
+        </footer>
+    </body>
+</html>

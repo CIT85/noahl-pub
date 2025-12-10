@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Noah Lee">
+        <meta name="description" content="Beat Saber Difficulty Calculator Project Description.">
+        <meta charset="UTF-8">
+        <title>Beat Saber Difficulty Project</title>
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="wordle-project.html">Wordle Rankings</a>
+                <a href="#">Beat Saber Difficulty Calculator</a>
+                <a href="osu-project.html">Osu! Beatmap Recommendations</a>
+                <a href="nsmb-ds-randomizer.html">New Super Mario Bros. DS Randomizer</a>
+                <a href="sfml-opengl.html">SFML &amp; OpenGL</a>
+            </nav>
+            <h1>Beat Saber Difficulty Calculator</h1>
+        </header>
+
+        <main>
+            <article id="aboutProject">
+                <h2>What is it?</h2>
+                <p>A tool used to quantify the difficulty of Custom Levels in Beat Saber.</p>
+                    
+                <section>
+                    <h3>How does it work</h3>
+                    <p>
+                        The calculator works by taking in the data of a beatmaps hit objects and calculating both the speed at which notes must be hit, as well as the angles between each note.
+                    </p>
+                </section>
+                
+                <section>
+                    <h3>Project Information</h3>
+                    <p>Below is a link to the project detailing more information.</p>
+
+                    <p>
+                        <a href="https://github.com/potasium2/BeatSaber-Difficulty-Calculator" target="_blank">Source Code</a>
+                    </p>
+                </section>
+            </article>
+
+            <article id="calculation" class="calc-grid">
+                <h2>How is difficulty Calculated?</h2>
+                <p>
+                    Difficulty is calculated using evaluators to evaluate the difficulty of a skillset. The two main skillsets, and the ones I will be talking about, are angular difficulty and stamina difficulty.
+                </p>
+
+                <section>
+                    <h3>Angle</h3>
+                    <p>
+                        Angle difficulty can be separated into two key components, the actual angle at which you have to hit the note and the difference of angles between two hit objects, or the angle change.
+                    </p>
+
+                    <figure>
+                        <img src="img/angle-difficulty-bonus.png" alt="Angle Difficulty Bonus" width="889" height="500">
+                        <figcaption>A graph showing how angle the angle of a note affects the difficulty rating.</figcaption>
+                    </figure>
+                    
+                    <figure>
+                        <img src="img/angle-change-bonus.png" alt="Angle Change Bonus" width="889" height="500" loading="lazy"> <!-- Offscreen due to Footer (Questionable) -->
+                        <figcaption>A graph showing how the change in angle between two notes affects the difficulty rating.</figcaption>
+                    </figure>
+                </section>
+
+                <section>
+                    <h3>Stamina</h3>
+                    <p>
+                        Stamina difficulty is mostly represented by taking the time between two hit objects, or the speed at which you must play in order to accurately hit them.
+                    </p>
+                    
+                    <figure>
+                        <img src="img/stamina-bonus.png" alt="Stamina Bonus" width="889" height="500" loading="lazy"> <!-- Garunteed offscreen -->
+                        <figcaption>A graph showing how the time between two notes, in milliseconds, affects the difficulty rating.</figcaption>
+                    </figure>
+                </section>
+
+                <section>
+                    <h3>Performance Points and Penalties</h3>
+                    <p>
+                        Along with difficulty, the tool has a performance calculator as well, taking into account many factors.
+                    </p>
+
+                    <p>Factors taken into account for performance bonuses and penalties.</p>
+                    <ul>
+                        <li>Accuracy (The overall accuracy of a play)</li>
+                        <li>Note Jump Speed (The Speed at which hit objects appear)</li>
+                        <li>Length Bonus (Bonus given to really long beatmaps)</li>
+                        <li>Miss Penalty (Penalty applied for missing a hit object)</li>
+                    </ul>
+                </section>
+            </article>
+
+            <article id="future">
+                <h2>Future for the Project.</h2>
+                <p>
+                    Future plans for this project, along with any other thoughts and comments I have.
+                </p>
+
+                <section>
+                    <h3>Reworks</h3>
+                    <p>
+                        Rhythm Game mapping is constantly evolving, and this is true for Beat Saber as well. Since there are effectively infinite possibilities when it comes to making a beatmpa, there are certain patterns and mapping styles that can appear that aren't accounted for in the calculator. This is very common in a game like Osu! where mappers will create maps for a 'meta' that are give out too many performance points for the actual difficulty of the map.
+                    </p>
+                    <p>
+                        Reworks essentially allow for changing certain aspects of the system that were considered overvalued in both difficulty and performance calculation. Because of this, it effectively means the tool will never be perfect, so it will be constantly worked on in order to ensure there is at least some balance with the maps that do currently exist as well as trying to prevent future maps from being weighted too high.
+                    </p>
+                </section>
+
+                <section>
+                    <h3>Leaderboard System</h3>
+                    <p>
+                        This tool isn't currently being used for any other purpose other than curiousity. Many players use the tool to compare theirs and other scores to each other to see the relative performance that players have done compared to each other. Ideally, this would be done automatically through some kind of leaderboard system that allows you to upload your scores and see how it compares instantly.
+                    </p>
+                    <p>
+                        Creating a external leaderboard and implementing it into the game isn't super difficult, the real difficulty comes in setting up a database, as well as getting a team to help set up a ranking process. For me the latter is harder, as it requires getting a group of capable people together who are passionate about the game to help develope a system that doesn't exist. This is something I really want to create in the future, and hopefully, if all goes well, I should be able to start working on a database and a mod for the game through to next summer.
+                    </p>
+                </section>
+            </article>
+        </main>
+
+        <footer>
+            <h3>External Links</h3>
+            <p>
+                <a href="https://www.w3schools.com/html/default.asp" target="_blank">W3Schools</a>
+            </p>
+
+            <p>
+                &lt;&lt;&lt; &copy; <a href="https://github.com/potasium2" target="_blank">Noah Lee</a> &gt;&gt;&gt;
+            </p>
+            <p>
+                <a href="site.html">Site Map</a>
+            </p>
+            <p>
+                <a href="#">Return to Top</a>
+            </p>
+        </footer>
+    </body>
+</html>
